@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sistema">
         <activity
+            android:name=".ui.HabitosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ProgressoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.FocoActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.HomeActivity"
             android:exported="true">
             <intent-filter>

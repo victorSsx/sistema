@@ -11,6 +11,9 @@ public class UsuarioRepository {
     private static final String KEY_NOME = "nome";
     private static final String KEY_XP = "xp";
 
+    private static final String KEY_HISTORICO = "historico_xp";
+
+
     private final SharedPreferences prefs;
 
     public UsuarioRepository(Context context) {
@@ -32,4 +35,13 @@ public class UsuarioRepository {
 
         return new Usuario(nome, xp);
     }
+
+    public void salvarHistorico(String historico) {
+        prefs.edit().putString(KEY_HISTORICO, historico).apply();
+    }
+
+    public String carregarHistorico() {
+        return prefs.getString(KEY_HISTORICO, "");
+    }
+
 }
